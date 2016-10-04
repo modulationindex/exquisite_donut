@@ -1,0 +1,9 @@
+<group>
+    <drawingId>0</drawingId>
+    <sceneDurationSec>30.25</sceneDurationSec>
+    <eatSprinklesOverSize>20</eatSprinklesOverSize>
+    <appFrameRate>60</appFrameRate>
+    <bVerticalSyncOn>1</bVerticalSyncOn>
+    <bEnableSmoothing>1</bEnableSmoothing>
+    <bLogVerbose>0</bLogVerbose>
+</group>
