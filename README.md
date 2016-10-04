@@ -1,4 +1,4 @@
-## OpenFrameworks Reference Example
+## Exquisite Donut Instance
 
 This is my implementation for the Exquisite Donut project. More info about this project can be found here:
 https://github.com/workergnome/exquisite_donut
