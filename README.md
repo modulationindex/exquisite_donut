@@ -3,7 +3,7 @@
 This is my implementation for the Exquisite Donut project. More info about this project can be found here:
 https://github.com/workergnome/exquisite_donut
 
-The **DonutCop** class holds the rules and the OSC signalling functionality.
+The **DonutCop** class holds the rules and the OSC signalling functionality. <br />
 
 The **Sprinkle** class represents the particle
 
@@ -20,18 +20,18 @@ Free particle variables are mapped to oscillation frequency and amplitude of the
 
 ### Keyboard Shortcuts
 
-g - show / hide gui
-f - show / hide framerate
-d - eat some sprinkles
-a - manually advance to the next line set
+g - show / hide gui <br />
+f - show / hide framerate <br />
+d - eat some sprinkles <br />
+a - manually advance to the next line set <br />
 
 ### GUI
 
-A GUI is included for easy configuration of a few variables on site. 
+A GUI is included for easy configuration of a few variables on site.  <br />
 
-Press the g key to open the gui.  
+Press the g key to open the gui.   <br />
 
-Changes are saved to carlson_settings.xml when the gui is closed. Make sure you press g again to close the gui and save your changes (or edit the xml file directly).
+Changes are saved to carlson_settings.xml when the gui is closed. Make sure you press g again to close the gui and save your changes (or edit the xml file directly). <br />
 
 
 
