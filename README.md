@@ -34,8 +34,19 @@ Press the g key to open the gui.   <br />
 Changes are saved to carlson_settings.xml when the gui is closed. Make sure you press g again to close the gui and save your changes (or edit the xml file directly). <br />
 
 
+Configurable vars include
 
+id - the id of this drawing  
 
+sceneDurationSec - length of time (seconds) before drawing advances to next set of lines.  
+
+eatSprinklesOverSize - eat up earliest added sprinkles after total number of sprinkles exceeds this number.
+
+appFrameRate - target app framerate (this should generally always be set to 60)
+
+bVerticalSyncOn - turn on or off vertical sync depending on display requirements. should generally be on.
+
+bEnableSmoothing - turn on or off smoothing (tbh, i'm not sure this is making much of a difference anyway...)
 
 
 
