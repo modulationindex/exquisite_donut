@@ -15,7 +15,7 @@ Sprinkle::Sprinkle(float maxVel, float maxAcc) {
     maxAcc = ofMap(maxAcc, 0, MAXA, 0, PIXEL_ACCEL_MAX);
     
     
-    maxY = float(ofGetHeight()) / float(ofGetWidth());
+    maxY = 1920./1080.;
     
     x = ofRandomuf();
     y = ofMap(ofRandomuf(),0.0,1.0,0.0,maxY);
@@ -38,7 +38,7 @@ Sprinkle::Sprinkle(const ofxOscMessage &m) {
     bDidEat = false;
     rad = TARGET_RAD;
     bEating = false;
-  maxY = float(ofGetHeight()) / float(ofGetWidth());
+  maxY = 1920./1080.;
 
   x = 0;
   y = m.getArgAsFloat(0);
@@ -120,11 +120,11 @@ void Sprinkle::killComplete(float *args){
 }
 
 float Sprinkle::getScreenX(){
-    return ofMap(x,0.0, 1.0, 0.0, ofGetWidth());
+    return ofMap(x,0.0, 1.0, 0.0, 1080.);
 }
 
 float Sprinkle::getScreenY(){
-    return ofMap(y,0.,maxY,0.,ofGetHeight());
+    return ofMap(y,0.,maxY,0.,1920.);
 }
 
 

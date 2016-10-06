@@ -38,8 +38,8 @@ void ofApp::setup(){
     _currentLineSet = 0;
     _lineSets.at(_currentLineSet).show();
     
-    _lineTexture.allocate(ofGetWidth(),ofGetHeight(),GL_RGBA,4);
-    _particleTexture.allocate(ofGetWidth(),ofGetHeight(),GL_RGBA,4);
+    _lineTexture.allocate(1080,1920,GL_RGBA,4);
+    _particleTexture.allocate(1080,1920,GL_RGBA,4);
     
     if(ofIsGLProgrammableRenderer()){
         //    _shader.load("shaders_gl3/red-mask.vert", "shaders_gl3/red-mask.frag");
@@ -109,7 +109,7 @@ void ofApp::draw(){
     ofEnableAlphaBlending();
     _particleTexture.begin();
     ofSetColor(0,0,0,1750);
-    ofDrawRectangle(0,0, ofGetWidth(), ofGetHeight());
+    ofDrawRectangle(0,0, 1080,1920);
     for (auto& p : sprinkles) { p.draw();}
     _particleTexture.end();
     
@@ -121,7 +121,7 @@ void ofApp::draw(){
     _shader.begin();
     _shader.setUniformTexture("srcTex", _lineTexture.getTexture(), 0);
     _shader.setUniformTexture("maskTex",_particleTexture.getTexture(),1);
-    drawShaderRect(0,0,ofGetWidth(),ofGetHeight());
+    drawShaderRect(0,0,1080,1920);
     _shader.end();
     
     

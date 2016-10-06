@@ -14,10 +14,10 @@
 LineSet::LineSet(int numLines, bool bOpener){
     
     this->_bOpener = bOpener;
-    _xSpacing = ofGetWidth() / (numLines);
+    _xSpacing = 1080 / (numLines);
     for (int i = 0; i < numLines ; i++){
         int xV = _xSpacing * (i);
-        if (xV <= 0 || xV >= ofGetWidth()){ continue;}
+        if (xV <= 0 || xV >= 1080){ continue;}
         _xCoords.push_back(xV);
         _targetThickness.push_back(2.);
         _thickness.push_back(2.);
@@ -43,7 +43,7 @@ void LineSet::draw(){
         for (int i = 0; i < _xCoords.size(); i++){
             ofSetLineWidth(2);
             float thickI = _thickness[i];
-            ofDrawRectangle(_xCoords[i] - 0.5 * thickI,0.f,thickI,ofGetHeight());
+            ofDrawRectangle(_xCoords[i] - 0.5 * thickI,0.f,thickI,1920.);
         }
     }
     
@@ -91,7 +91,7 @@ void LineSet::toggleOpener(){
 
 void LineSet::update(vector<Sprinkle> & sprinkles){
     _frameCounter += 1;
-    int screenW = ofGetWidth();
+    int screenW = 1080;
     float invXSpacing = 1./_xSpacing;
     int numCoords = _xCoords.size();
     float timeSec = 0.001 * ofGetElapsedTimeMillis();

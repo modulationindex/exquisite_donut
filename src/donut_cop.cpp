@@ -161,7 +161,34 @@ void DonutCop::handleControlMessage(const ofxOscMessage &m) {
   _maxAcceleration = m.getArgAsFloat(5);
 
   // Calculate left and right IDs
-  int val;
+    // Calculate left and right IDs
+    int val;
+    int maxId = 0;
+    leftId = -1;
+    rightId = 256;
+    for (int i = 0; i < data.size(); ++i) {
+        val = (int)(data.getData()[i]);
+        if (val > id && val < rightId) {
+            rightId = val;
+        }
+        if (val < id && val > leftId) {
+            leftId = val;
+        }
+        if (val > maxId) {
+            maxId = val;
+        }
+    }
+    if (rightId == 256) {
+        rightId = 0;
+    }
+    if (leftId == -1) {
+        leftId = maxId;
+    }
+    
+    ofLogVerbose() << "My left ID is " << leftId << " and my right ID is " << rightId << ".";
+    
+    
+  /*int val;
   int maxId = 0;
   leftId = 256;
   rightId = -1;
@@ -185,5 +212,6 @@ void DonutCop::handleControlMessage(const ofxOscMessage &m) {
   }
 
   ofLogVerbose() << "My left ID is " << leftId << " and my right ID is " << rightId << ".";
+   */
 }
 
